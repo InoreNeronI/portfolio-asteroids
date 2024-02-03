@@ -1,26 +1,24 @@
-
-import Ball from "../classes/ball";
+import Ball from '../classes/ball';
 
 class BallsController {
-    constructor(_) {
-        this.balls = [];
-        for (let i = 0; i < 33; i++) {
-            this.balls[i] = new Ball(_);
-        }
+  constructor(_) {
+    this.balls = [];
+    for (let i = 0; i < 33; i++) {
+      this.balls[i] = new Ball(_);
     }
+  }
 
-    show() {
-        for (let i = 0; i < this.balls.length; i++) {
-            this.balls[i].show();
-        }
+  show() {
+    for (let i = 0; i < this.balls.length; i++) {
+      this.balls[i].show();
     }
+  }
 
-    update() {
-        for (let i = 0; i < this.balls.length; i++) {
-            this.balls[i].update();
-        }
+  update() {
+    for (let i = 0; i < this.balls.length; i++) {
+      this.balls[i].update();
     }
-
+  }
 }
 
 export default BallsController;

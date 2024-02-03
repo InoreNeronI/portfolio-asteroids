@@ -1,13 +1,12 @@
+@import 'variables';
+@import 'fonts';
 
-@import "variables";
-@import "fonts";
+@import 'partials/utilities';
+@import 'partials/layout';
+@import 'partials/header';
+@import 'partials/footer';
 
-@import "partials/utilities";
-@import "partials/layout";
-@import "partials/header";
-@import "partials/footer";
-
-@import "sections/about";
-@import "sections/contact";
-@import "sections/home";
-@import "sections/skills";
+@import 'sections/about';
+@import 'sections/contact';
+@import 'sections/home';
+@import 'sections/skills';

@@ -1,6 +1,5 @@
-![François PEYRET Preview](https://github.com/francoispeyret/portfolio-2020/blob/master/repository-open-graph-template.png)
+![Portfolio Preview](https://raw.githubusercontent.com/InoreNeronI/portfolio-asteroids/main/preview.png)
 
-# François PEYRET - Portfolio 2020
+# François Peyret - Portfolio 2020
 
-Website available on https://www.francoispeyret.fr/
-
+Website available on https://www.francoispeyret.fr

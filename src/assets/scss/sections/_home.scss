@@ -1,109 +1,111 @@
 #home {
-    min-height: 100vh;
-    margin: 0 -1.5rem;
-    padding: 100px 3rem;
-    .resume-screen,
+  min-height: 100vh;
+  margin: 0 -1.5rem;
+  padding: 100px 3rem;
+  .resume-screen,
+  .content {
+    transition: ease-in all 0.33s;
+    //transform: translateY(0);
+  }
+
+  .resume-screen {
+    opacity: 0;
+    pointer-events: none;
+
+    svg {
+      fill: #fff;
+      display: block;
+      height: 64px;
+      width: 64px;
+      margin: 0 auto;
+      position: fixed;
+      top: calc(50% - 32px);
+      left: calc(50% - 32px);
+    }
+  }
+
+  &.started {
     .content {
-        transition: ease-in all 0.33s;
-        //transform: translateY(0);
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
     }
+  }
 
+  &.resumed {
     .resume-screen {
-        opacity: 0;
-        pointer-events: none;
-
-        svg {
-            fill: #fff;
-            display: block;
-            height: 64px;
-            width: 64px;
-            margin: 0 auto;
-            position: fixed;
-            top: calc(50% - 32px);
-            left: calc(50% - 32px);
-        }
+      opacity: 1;
     }
-
-    &.started {
-        .content {
-            transform: translateY(-100%);
-            opacity: 0;
-            pointer-events: none;
-        }
-    }
-
-    &.resumed {
-        .resume-screen {
-            opacity: 1;
-        }
-        #p5-holder {
-            filter: blur(5px);
-        }
-    }
-
     #p5-holder {
-        position: fixed;
-        z-index: 100;
-        pointer-events: none;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        transition: ease-in all 0.33s;
+      filter: blur(5px);
     }
+  }
 
-    #play-start {
-        margin: 3rem auto;
-        display: block;
-        text-transform: uppercase;
-        font-size: 2.4rem;
-        font-weight: 800;
-        padding: 0.75rem 2.5rem 0.7rem;
-        color: #fff;
-        background: none;
-        border: 3px solid #fff;
-        appearance: none;
-        outline: none;
+  #p5-holder {
+    position: fixed;
+    z-index: 100;
+    pointer-events: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: ease-in all 0.33s;
+  }
 
-        transition: all 0.25s cubic-bezier(0.71,-0.29, 0.63, 2.11);
+  #play-start {
+    margin: 3rem auto;
+    display: block;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 800;
+    padding: 0.75rem 2.5rem 0.7rem;
+    color: #fff;
+    background: none;
+    border: 3px solid #fff;
+    appearance: none;
+    outline: none;
 
-        &:focus,
-        &:active,
-        &:hover {
-            background: #fff;
-            color: #000;
-            letter-spacing: 0.396em;
-            cursor: pointer;
-        }
+    transition: all 0.25s cubic-bezier(0.71, -0.29, 0.63, 2.11);
+
+    &:focus,
+    &:active,
+    &:hover {
+      background: #fff;
+      color: #000;
+      letter-spacing: 0.396em;
+      cursor: pointer;
     }
+  }
 }
 
 .mouse-invit {
-    width: 30px;
-    height: 50px;
-    border: 3px solid #fff;
-    border-radius: 20px;
-    position: fixed;
-    top: calc(100% - 65px);
-    left: calc(50% - 15px);
-    
-    .scroll {
-        display: block;
-        height: 4px;
-        width: 4px;
-        border-radius: 3px;
-        background-color: #fff;
-        margin: 8px auto 0;
-        
-        animation: scrollInvit ease-in-out 1.5s infinite;
-        
-        @keyframes scrollInvit {
-            0%,70%,100% {
-                transform: none;
-            }
-            80% {
-                transform: translateY(5px);
-            }
-        }
+  width: 30px;
+  height: 50px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  position: fixed;
+  top: calc(100% - 65px);
+  left: calc(50% - 15px);
+
+  .scroll {
+    display: block;
+    height: 4px;
+    width: 4px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin: 8px auto 0;
+
+    animation: scrollInvit ease-in-out 1.5s infinite;
+
+    @keyframes scrollInvit {
+      0%,
+      70%,
+      100% {
+        transform: none;
+      }
+      80% {
+        transform: translateY(5px);
+      }
     }
+  }
 }

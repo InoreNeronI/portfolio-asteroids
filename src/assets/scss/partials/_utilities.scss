@@ -1,123 +1,127 @@
-
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Proxima', arial, sans-serif;
-    -webkit-font-smoothing: antialiased; /* Chrome, Safari */
-    -moz-osx-font-smoothing: grayscale; /* Firefox */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Proxima', arial, sans-serif;
+  -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+  -moz-osx-font-smoothing: grayscale; /* Firefox */
 }
 
 html {
-    scroll-behavior: smooth;
-    cursor: crosshair;
-    
-    scrollbar-color: #fff rgba(#000,0.3);
-    scrollbar-width: thin;
+  scroll-behavior: smooth;
+  cursor: crosshair;
+
+  scrollbar-color: #fff rgba(#000, 0.3);
+  scrollbar-width: thin;
 }
 
 @media (max-width: 769px) {
-    html, body {
-        width: 100%;
-        overflow-x: hidden;
-    }
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
 }
 
-::-moz-selection { background: transparent; }
-::selection { background: transparent; }
+::-moz-selection {
+  background: transparent;
+}
+::selection {
+  background: transparent;
+}
 
 body {
-    color: white;
-    background-color: #2d325a;
-    animation: backgroundAnimation ease-in-out 15s infinite;
+  color: white;
+  background-color: #2d325a;
+  animation: backgroundAnimation ease-in-out 15s infinite;
 
-    @keyframes backgroundAnimation {
-        0%, 100% {
-            background-color: #2d325a;
-        }
-        33% {
-            background-color: #2d5a3e;
-        }
-        66% {
-            background-color: #5a2d3e;
-        }
+  @keyframes backgroundAnimation {
+    0%,
+    100% {
+      background-color: #2d325a;
     }
+    33% {
+      background-color: #2d5a3e;
+    }
+    66% {
+      background-color: #5a2d3e;
+    }
+  }
 
-    &::-webkit-scrollbar {
-        width: 4px;
-    }
-    &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 6px rgba(#000,0.3);
-        -webkit-box-shadow: inset 0 0 6px rgba(#000,0.3);
-    }
-    &::-webkit-scrollbar-thumb {
-      background-color: #fff;
-      outline: 1px solid slategrey;
-    }
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(#000, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(#000, 0.3);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    outline: 1px solid slategrey;
+  }
 }
 
 a {
-    color: white;
-    text-decoration: none;
-    position: relative;
+  color: white;
+  text-decoration: none;
+  position: relative;
 
-    &:not(.no-hover) {
-        &::before {
-            content:"";
-            display: block;
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 10%;
-            height: 0;
-            background-color: #fff7;
-            transition: height ease 0.3s;
-        }
-    
-        &:hover::before {
-            height: 20%;
-        }
+  &:not(.no-hover) {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 10%;
+      height: 0;
+      background-color: #fff7;
+      transition: height ease 0.3s;
     }
+
+    &:hover::before {
+      height: 20%;
+    }
+  }
 }
 
 .tooltip {
-    border: 2px solid #fff;
-    background: transparent;
-    color: white;
-    padding: 4px 8px 5px;
-    font-size: 13px;
-    display: none;
-    position: absolute;
-    opacity: 0;
-    &[data-show] {
-        display: block;
-        animation: fadeIn ease-in-out .5s;
-        opacity: 1;
+  border: 2px solid #fff;
+  background: transparent;
+  color: white;
+  padding: 4px 8px 5px;
+  font-size: 13px;
+  display: none;
+  position: absolute;
+  opacity: 0;
+  &[data-show] {
+    display: block;
+    animation: fadeIn ease-in-out 0.5s;
+    opacity: 1;
 
-        @keyframes fadeIn {
-            0%{
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-        
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   }
+}
 
-  .arrow,
-  .arrow::before {
-    position: absolute;
-    width: 0px;
-    height: 0px;
-    z-index: -1;
-    top: -6px;
-    left: -6px;
-  }
+.arrow,
+.arrow::before {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  z-index: -1;
+  top: -6px;
+  left: -6px;
+}
 
-  .arrow::before {
-    content: '';
-    border: 6px solid transparent;
-    border-bottom-color: #fff;
-  }
+.arrow::before {
+  content: '';
+  border: 6px solid transparent;
+  border-bottom-color: #fff;
+}

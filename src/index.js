@@ -5,4 +5,3 @@ import '@/assets/javascripts/header';
 import '@/assets/javascripts/footer';
 import '@/assets/javascripts/about';
 import '@/assets/javascripts/skills';
-

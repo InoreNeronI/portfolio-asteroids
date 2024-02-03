@@ -1,220 +1,219 @@
 #skills {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
-    .content {
-        display: block;
-    }
+  .content {
+    display: block;
+  }
 
-    h2 {
-        font-size: 2.4rem;
-    }
+  h2 {
+    font-size: 2.4rem;
+  }
 
-    p {
-        text-transform: uppercase;
-        font-size: 0.66rem;
+  p {
+    text-transform: uppercase;
+    font-size: 0.66rem;
+  }
+
+  #skill-root {
+    max-width: 1080px;
+    min-height: 772px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (max-width: 1132px) {
+      max-width: 800px;
     }
-    
-    #skill-root {
-        max-width: 1080px;
-        min-height: 772px;
-        margin-right: auto;
-        margin-left: auto;
-        @media (max-width: 1132px) {
-            max-width: 800px;
-        }
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-end;
-            transition: all ease-in-out .3s;
-            @media (max-width: 832px) {
-                justify-content: center;
-            }
-        }
-        li {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 160px;
-            max-width: 160px;
-            flex: 0 0 160px;
-            border: 2px solid #fff;
-            margin: 10px;
-            padding: 10px;
-            text-transform: uppercase;
-            font-size: 22px;
-            box-sizing: border-box;
-            transition: background-color ease-in-out .2s;
-            @media (max-width: 1132px) {
-                min-height: 110px;
-                max-width: 110px;
-                flex: 0 0 110px;
-            }
-            
-            &.space {
-                @media (max-width: 832px) {
-                    display: none;
-                }
-                &:nth-child(2) {
-                    max-width: 520px;
-                    flex: 0 0 520px;
-                    @media (max-width: 1132px) {
-                        max-width: 370px;
-                        flex: 0 0 370px;
-                    }
-                }
-            }
-            
-            .id {
-                font-size: 12px;
-            }
-            
-            .ref {
-                font-size: 62px;
-                font-weight: 800;
-                text-transform: capitalize;
-                @media (max-width: 1132px) {
-                    font-size: 42px;
-                }
-            }
-            .name {
-                font-size: 14px;
-                text-transform: capitalize;
-                display: flex;
-                @media (max-width: 1132px) {
-                    font-size: 9px;
-                }
-                .left {
-                    text-align: left;
-                }
-                .right {
-                    flex-grow: 1;
-                    text-align: right;
-                }
-            }
-        }
-        
-        ul.list {
-            li {
-                flex: 0 0 auto;
-                max-width: none;
-                text-align: left;
-                min-height: 60px;
-                padding: 10px 20px;
-                
-                .ref {
-                    font-size: 32px;
-                    @media (max-width: 769px) {
-                        font-size: 22px;
-                    }
-                }
-                
-                .name,
-                .id {
-                    display: none;
-                }
-                
-            }
-        }
-        
-        .loading {
-            ul {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-        }
-    }
-    .sort {
-        display: flex;
-        max-width: 164px;
-        margin: 2rem auto;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      transition: all ease-in-out 0.3s;
+      @media (max-width: 832px) {
         justify-content: center;
-        
-        > div {
-            padding: 11.5px 10px;
-            cursor: pointer;
-            position: relative;
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 56px;
-            transition: all ease-in-out .2s;
-            
-            &.active {
-                .carret {
-                    background-color: #fff;
-                    &:nth-child(4) {
-                        background-color: transparent;
-                    }
-                }
-                .tiret:first-child,
-                .tiret:last-child {
-                    flex: 0 0 28px;
-                }
-                .tiret:nth-child(2) {
-                    flex: 0 0 20px;
-                }
-                .circle {
-                    background-color: #fff;
-                    width: 32px;
-                    height: 32px;
-                    margin: 0;
-                    &.small {
-                        width: 8px;
-                        height: 8px;
-                    }
-                }
-            }
-            
-            .carret {
-                margin: 2px;
-                flex: 0 0 12px;
-                height: 12px;
-                width: 12px;
-                border: 2px solid #fff;
-                transition: all ease-in-out .2s;
-            }
-            .tiret {
-                margin: 4px 2px;
-                flex: 0 0 28px;
-                width: 28px;
-                border-bottom: 3px solid #fff;
-                transition: all ease-in-out .2s;
-                &:last-child {
-                    flex: 0 0 20px;
-                }
-                &:first-child {
-                    flex: 0 0 16px;
-                }
-            }
-            .circle {
-                width: 28px;
-                height: 28px;
-                border-radius: 20px;
-                border: 3px solid #fff;
-                transition: all ease-in-out .2s;
-                margin: 4px 4px 0 0;
-                &.small {
-                    margin: 0;
-                    position: absolute;
-                    width: 4px;
-                    height: 4px;
-                    left: 37px;
-                    top: 7px;
-                }
-            }
-        }
-        
-        &:hover {
-            > div {
-                opacity: 0.4;
-                
-                &:hover {
-                    opacity: 1;
-                }
-            }
-        }
+      }
     }
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 160px;
+      max-width: 160px;
+      flex: 0 0 160px;
+      border: 2px solid #fff;
+      margin: 10px;
+      padding: 10px;
+      text-transform: uppercase;
+      font-size: 22px;
+      box-sizing: border-box;
+      transition: background-color ease-in-out 0.2s;
+      @media (max-width: 1132px) {
+        min-height: 110px;
+        max-width: 110px;
+        flex: 0 0 110px;
+      }
+
+      &.space {
+        @media (max-width: 832px) {
+          display: none;
+        }
+        &:nth-child(2) {
+          max-width: 520px;
+          flex: 0 0 520px;
+          @media (max-width: 1132px) {
+            max-width: 370px;
+            flex: 0 0 370px;
+          }
+        }
+      }
+
+      .id {
+        font-size: 12px;
+      }
+
+      .ref {
+        font-size: 62px;
+        font-weight: 800;
+        text-transform: capitalize;
+        @media (max-width: 1132px) {
+          font-size: 42px;
+        }
+      }
+      .name {
+        font-size: 14px;
+        text-transform: capitalize;
+        display: flex;
+        @media (max-width: 1132px) {
+          font-size: 9px;
+        }
+        .left {
+          text-align: left;
+        }
+        .right {
+          flex-grow: 1;
+          text-align: right;
+        }
+      }
+    }
+
+    ul.list {
+      li {
+        flex: 0 0 auto;
+        max-width: none;
+        text-align: left;
+        min-height: 60px;
+        padding: 10px 20px;
+
+        .ref {
+          font-size: 32px;
+          @media (max-width: 769px) {
+            font-size: 22px;
+          }
+        }
+
+        .name,
+        .id {
+          display: none;
+        }
+      }
+    }
+
+    .loading {
+      ul {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+    }
+  }
+  .sort {
+    display: flex;
+    max-width: 164px;
+    margin: 2rem auto;
+    justify-content: center;
+
+    > div {
+      padding: 11.5px 10px;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 56px;
+      transition: all ease-in-out 0.2s;
+
+      &.active {
+        .carret {
+          background-color: #fff;
+          &:nth-child(4) {
+            background-color: transparent;
+          }
+        }
+        .tiret:first-child,
+        .tiret:last-child {
+          flex: 0 0 28px;
+        }
+        .tiret:nth-child(2) {
+          flex: 0 0 20px;
+        }
+        .circle {
+          background-color: #fff;
+          width: 32px;
+          height: 32px;
+          margin: 0;
+          &.small {
+            width: 8px;
+            height: 8px;
+          }
+        }
+      }
+
+      .carret {
+        margin: 2px;
+        flex: 0 0 12px;
+        height: 12px;
+        width: 12px;
+        border: 2px solid #fff;
+        transition: all ease-in-out 0.2s;
+      }
+      .tiret {
+        margin: 4px 2px;
+        flex: 0 0 28px;
+        width: 28px;
+        border-bottom: 3px solid #fff;
+        transition: all ease-in-out 0.2s;
+        &:last-child {
+          flex: 0 0 20px;
+        }
+        &:first-child {
+          flex: 0 0 16px;
+        }
+      }
+      .circle {
+        width: 28px;
+        height: 28px;
+        border-radius: 20px;
+        border: 3px solid #fff;
+        transition: all ease-in-out 0.2s;
+        margin: 4px 4px 0 0;
+        &.small {
+          margin: 0;
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          left: 37px;
+          top: 7px;
+        }
+      }
+    }
+
+    &:hover {
+      > div {
+        opacity: 0.4;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
