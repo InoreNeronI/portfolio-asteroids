@@ -2,11 +2,11 @@ class SoundController {
   constructor(_) {
     this._ = _;
     _.soundFormats('mp3', 'ogg');
-    this.cursorFireSound = _.loadSound('/assets/sounds/laser-beam.mp3');
-    this.cursorDamageSound = _.loadSound('/assets/sounds/cursor-damage.mp3');
-    this.cursorLootSound = _.loadSound('/assets/sounds/cursor-loot.mp3');
-    this.asteroidSpawnSound = _.loadSound('/assets/sounds/asteroid-spawn.mp3');
-    this.asteroidCrashSound = _.loadSound('/assets/sounds/asteroid-explode.mp3');
+    this.cursorFireSound = _.loadSound('./assets/sounds/laser-beam.mp3');
+    this.cursorDamageSound = _.loadSound('./assets/sounds/cursor-damage.mp3');
+    this.cursorLootSound = _.loadSound('./assets/sounds/cursor-loot.mp3');
+    this.asteroidSpawnSound = _.loadSound('./assets/sounds/asteroid-spawn.mp3');
+    this.asteroidCrashSound = _.loadSound('./assets/sounds/asteroid-explode.mp3');
 
     this.sound = false;
 

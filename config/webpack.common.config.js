@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -65,6 +66,22 @@ module.exports = {
         removeComments: true,
         collapseWhitespace: true,
       },
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './src/assets/images',
+          to: 'assets/images',
+        },
+        {
+          from: './src/assets/sounds',
+          to: 'assets/sounds',
+        },
+        {
+          from: './src/assets/fonts',
+          to: 'assets/fonts',
+        },
+      ],
     }),
     new CleanWebpackPlugin(),
   ],

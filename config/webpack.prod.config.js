@@ -1,4 +1,3 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { merge } = require('webpack-merge');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -12,22 +11,4 @@ module.exports = merge(webpackBaseConfig, {
   output: {
     publicPath: '/portfolio-asteroids/',
   },
-  plugins: [
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: './src/assets/images',
-          to: 'portfolio-asteroids/assets/images',
-        },
-        {
-          from: './src/assets/sounds',
-          to: 'portfolio-asteroids/assets/sounds',
-        },
-        {
-          from: './src/assets/fonts',
-          to: 'portfolio-asteroids/assets/fonts',
-        },
-      ],
-    }),
-  ]
 });
