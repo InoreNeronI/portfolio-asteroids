@@ -67,22 +67,6 @@ module.exports = {
         collapseWhitespace: true,
       },
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: './src/assets/images',
-          to: 'assets/images',
-        },
-        {
-          from: './src/assets/sounds',
-          to: 'assets/sounds',
-        },
-        {
-          from: './src/assets/fonts',
-          to: 'assets/fonts',
-        },
-      ],
-    }),
     new CleanWebpackPlugin(),
   ],
 };
