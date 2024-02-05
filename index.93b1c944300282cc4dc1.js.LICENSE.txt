@@ -1,12 +1,4 @@
 /*!
- * @overview es6-promise - a tiny implementation of Promises/A+.
- * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
- * @license   Licensed under MIT license
- *            See https://raw.githubusercontent.com/stefanpenner/es6-promise/master/LICENSE
- * @version   v4.2.6+9869a4bc
- */
-
-/*!
  * GSAP 3.12.5
  * https://gsap.com
  *
@@ -16,20 +8,7 @@
  * @author: Jack Doyle, jack@greensock.com
 */
 
-/*!
- * The buffer module from node.js, for the browser.
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
-/*! @source http://purl.eligrey.com/github/FileSaver.js/blob/master/FileSaver.js */
-
-/*! https://mths.be/codepointat v0.2.0 by @mathias */
-
-/*! p5.js v0.10.2 October 14, 2019 */
-
-/*! p5.sound.js v0.3.11 2019-03-14 */
+/*! p5.js v1.9.0 November 28, 2023 */
 
 /**
  * @license React
