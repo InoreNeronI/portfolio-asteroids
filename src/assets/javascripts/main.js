@@ -69,7 +69,7 @@ let s = (_) => {
     }
 
     _.clear();
-    _.textFont('Proxima');
+    _.textFont('ProximaNova');
 
     // INTERFACE
     if (cursor.life > 0) {
