@@ -1,5 +1,5 @@
-import * as p5 from 'p5';
-import * as p5moduleSound from 'p5/lib/addons/p5.sound';
+import p5 from 'p5';
+import 'p5/lib/addons/p5.sound';
 
 import Cursor from './classes/cursor';
 import Gravity from './classes/gravity';

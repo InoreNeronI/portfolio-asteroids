@@ -1,8 +1,9 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
+const { ProvidePlugin } = require('webpack');
 
 module.exports = {
   entry: {
@@ -53,6 +54,9 @@ module.exports = {
   },
 
   plugins: [
+    new ProvidePlugin({
+      p5: 'p5',
+    }),
     new MiniCssExtractPlugin({
       filename: 'style.[chunkhash].css',
       chunkFilename: '[id].css',
