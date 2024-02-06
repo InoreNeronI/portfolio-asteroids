@@ -221,4 +221,4 @@ let s = (_) => {
   });
 };
 
-const P5 = new p5(s);
+new p5(s);
